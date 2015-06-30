@@ -19,6 +19,7 @@ apply plugin: 'org.flywaydb.flyway'
 ext.props = new Properties()
 
 if (System.getenv("PROFILE") == 'snap') {
+    System.out.println("Running on Snap!");
     apply from: 'profile_snap.gradle'
 } else if (System.getenv("PROFILE") == 'heroku') {
     apply from: 'profile_heroku.gradle'
